@@ -1,0 +1,71 @@
+.tarjeta {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  max-width: 300px;
+  margin: 1rem;
+}
+
+.tarjeta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imagen {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #f0f0f0;
+}
+
+.nombre {
+  color: #333;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profesion {
+  color: #666;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.descripcion {
+  color: #555;
+  line-height: 1.6;
+  margin: 1rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+/* Contenedor para las tarjetas (lo usaremos en App.jsx) */
+.contenedorTarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .contenedorTarjetas {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .tarjeta {
+    width: 90%;
+    max-width: 350px;
+    margin: 0.5rem 0;
+  }
+}
